@@ -63,7 +63,7 @@ export class AuthService {
 
     return {
       user: rest,
-      token: await this.getJWT({ id: user.id }),
+      token: this.getJWT({ id: user.id }),
     };
   }
 
@@ -72,7 +72,7 @@ export class AuthService {
 
     return {
       user,
-      token: await this.getJWT({ id: user._id }),
+      token: this.getJWT({ id: user._id }),
     };
   }
 
